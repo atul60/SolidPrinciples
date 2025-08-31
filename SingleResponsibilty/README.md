@@ -1,35 +1,84 @@
-# Open-Closed principle
+# SOLID principles
 
-The main idea of the open-closed principle is that every class/function/module/section of your code should be open for extension and closed for modification.
+> This repository contains the SOLID principles details and code examples written in JavaScript and Typescript.
 
-This means that a class/function/module should be able to be extended in functionality without having to go into the class and change it.
+## Definition
 
-Essentially you shouldn't need to change existing code to add new functionality and instead should only have to add new code.
+SOLID is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible, and maintainable.
 
-💡 The open-closed principle is very related to the single responsible principle.
+The SOLID principles are:
 
-This is something that you must consider but you don't need to take this to extreme and close all your classes so they can't be modified.
+### [S] Single responsibility principle
 
-## 🧠 See the code and you'll learn:
+There should never be more than one reason for a class to change.
+In other words, every class should have only one responsibility.
 
-- What the open-closed principle is
-- Why the open-closed principle is important
-- How to use the open-closed principle
-- How to spot violations of the open-closed principle
+### [O] Open–Closed principle
 
-## Advantages
+Software entities should be open for extension, but closed for modification.
 
-- **Extensibility**: "When a single change to a program results in a cascade of changes to dependent modules, that program exhibits the undesirable attributes that we have come to associate with 'bad' design. The program becomes fragile, rigid, unpredictable, and unreusable. The open-closed principle attacks this in a very straightforward way. It says that you should design modules that never change. When requirements change, you extend the behavior of such modules by adding new code, not by changing old code that already works."
-  — Robert Martin
+### [L] Liskov substitution principle
 
-- **Maintainability**: the main benefit of this approach is that an interface introduces an additional level of abstraction which enables loose coupling. The implementations of an interface are independent of each other and don’t need to share any code.
+Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
+See also design by contract.
 
-- **Flexibility**: the open-closed principle also applies to plugin and middleware architecture. In that case, your base software entity is your application core functionality.
-  In the case of plugins, you have a base or core module that can be plugged with new features and functionality through a common gateway interface. A good example of this is web browser extensions.
-  Binary compatibility will also be in-tact in subsequent releases.
+### [I] Interface segregation principle
 
-## Disadvantages
+Many client-specific interfaces are better than one general-purpose interface.
 
-- The resource allocator code needs to be unit tested whenever a new resource type is added
-- Adding a new resource type introduces considerable risk in the design as almost all aspects of resource allocation have to be modified
-- Developer adding a new resource type has to understand the inner workings for the resource allocator
+### [D] Dependency inversion principle
+
+Depend upon abstractions, not concretions.
+
+[👆 Source](https://en.wikipedia.org/wiki/SOLID)
+
+## Code examples
+
+| Principle | Information |
+| -- | -- |
+| Single responsibility | [📄](./SingleResponsiblityPrinciple/README.md) |
+| Open–Closed | [📄](./OpenClosedPrinciple/README.md) |
+| Liskov substitution | [📄](./LiskovSubstitutionPrinciple/README.md) |
+| Interface segregation | [📄](./InterfaceSegregationPrinciple/README.md) |
+| Dependency inversion | [📄](./DependencyInversionPrinciple/README.md) |
+
+# Technologies
+
+| Technology | Short name | Documentation |  
+| -- | -- | -- |
+| JavaScript | JS | [📎](https://www.javascript.com) | 
+| TypeScript | TS | [📎](https://www.typescriptlang.org/docs/) |
+
+# Setup
+
+## Clone repository
+
+Create and go to the directory where you want to place the repository
+
+```bash
+  cd my-directory
+```
+
+Clone the project
+
+```bash
+  git clone https://github.com/pncsoares/javascript-solid-principles.git
+```
+
+Go to the project directory
+
+```bash
+  cd javascript-solid-principles
+```
+
+## Contribute
+
+Feel free to contribute and fix something that is wrong or could be better! Issues and pull requests are welcome.
+
+To do so please create a new branch, change or add what you want and then create a Pull Request to branch `main` and add me as reviewer.
+
+Thanks 🙏
+
+# License
+
+MIT
