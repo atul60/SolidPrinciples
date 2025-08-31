@@ -1,84 +1,29 @@
-# SOLID principles
+# Single responsability principle
 
-> This repository contains the SOLID principles details and code examples written in JavaScript and Typescript.
+The single-responsibility principle (SRP) is a computer-programming principle that states that every module, class or function in a computer program should have responsibility over a single part of that program's functionality, and it should encapsulate that part. All of that module, class or function's services should be narrowly aligned with that responsibility.
 
-## Definition
+## Wrong interpretation of the principle
 
-SOLID is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible, and maintainable.
+Most developers interpret to mean that a class should perform only one task. But it's not only classes, functions you implement in code during development should also perform only one task. So one should interpret it as meaning that an implementation should perform only one task.
 
-The SOLID principles are:
+One class can perform multiple tasks, there is no question of that, but it's not going to provide quality / better output.
 
-### [S] Single responsibility principle
+So to get good quality/better output of work, one method should do one task at time.
 
-There should never be more than one reason for a class to change.
-In other words, every class should have only one responsibility.
+## 🧠 See the code and you'll learn:
 
-### [O] Open–Closed principle
+- What the single responsibility principle is
+- Why the single responsibility principle is important
+- How to use the single responsibility principle
+- How to spot violations of the single responsibility principle
 
-Software entities should be open for extension, but closed for modification.
+## Advantages
 
-### [L] Liskov substitution principle
+- **Clean**: clean and standard code
+- **Maintainable**: Manageable and easy for maintenance
+- **Scalable and redable**:  Easy to refactor or change and readeble code
 
-Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.
-See also design by contract.
+## Disadvantages
 
-### [I] Interface segregation principle
-
-Many client-specific interfaces are better than one general-purpose interface.
-
-### [D] Dependency inversion principle
-
-Depend upon abstractions, not concretions.
-
-[👆 Source](https://en.wikipedia.org/wiki/SOLID)
-
-## Code examples
-
-| Principle | Information |
-| -- | -- |
-| Single responsibility | [📄](./SingleResponsiblityPrinciple/README.md) |
-| Open–Closed | [📄](./OpenClosedPrinciple/README.md) |
-| Liskov substitution | [📄](./LiskovSubstitutionPrinciple/README.md) |
-| Interface segregation | [📄](./InterfaceSegregationPrinciple/README.md) |
-| Dependency inversion | [📄](./DependencyInversionPrinciple/README.md) |
-
-# Technologies
-
-| Technology | Short name | Documentation |  
-| -- | -- | -- |
-| JavaScript | JS | [📎](https://www.javascript.com) | 
-| TypeScript | TS | [📎](https://www.typescriptlang.org/docs/) |
-
-# Setup
-
-## Clone repository
-
-Create and go to the directory where you want to place the repository
-
-```bash
-  cd my-directory
-```
-
-Clone the project
-
-```bash
-  git clone https://github.com/pncsoares/javascript-solid-principles.git
-```
-
-Go to the project directory
-
-```bash
-  cd javascript-solid-principles
-```
-
-## Contribute
-
-Feel free to contribute and fix something that is wrong or could be better! Issues and pull requests are welcome.
-
-To do so please create a new branch, change or add what you want and then create a Pull Request to branch `main` and add me as reviewer.
-
-Thanks 🙏
-
-# License
-
-MIT
+- To many small modules/classes
+- Take more time for development and increases project cost
